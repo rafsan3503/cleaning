@@ -1,0 +1,2097 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>C&M - Garbage Cleaning Service</title>
+	<meta name='robots' content='max-image-preview:large' />
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<script src="https://kit.fontawesome.com/22f7957471.js" crossorigin="anonymous"></script>
+	<script>
+		window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/themexriver.com\/wp\/orixy\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2" } };
+		/*! This file is auto-generated */
+		!function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { p.clearRect(0, 0, i.width, i.height), p.fillText(e, 0, 0); e = i.toDataURL(); return p.clearRect(0, 0, i.width, i.height), p.fillText(t, 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (p && p.fillText) switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !s("\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff", "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff") }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji))) }(window, document, window._wpemojiSettings);
+	</script>
+	<style>
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 0.07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+	<link rel='stylesheet' id='wp-block-library-css'
+		href='https://themexriver.com/wp/orixy/wp-includes/css/dist/block-library/style.min.css?ver=6.2' media='all' />
+	<style id='wp-block-library-theme-inline-css'>
+		.wp-block-audio figcaption {
+			color: #555;
+			font-size: 13px;
+			text-align: center
+		}
+
+		.is-dark-theme .wp-block-audio figcaption {
+			color: hsla(0, 0%, 100%, .65)
+		}
+
+		.wp-block-audio {
+			margin: 0 0 1em
+		}
+
+		.wp-block-code {
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			font-family: Menlo, Consolas, monaco, monospace;
+			padding: .8em 1em
+		}
+
+		.wp-block-embed figcaption {
+			color: #555;
+			font-size: 13px;
+			text-align: center
+		}
+
+		.is-dark-theme .wp-block-embed figcaption {
+			color: hsla(0, 0%, 100%, .65)
+		}
+
+		.wp-block-embed {
+			margin: 0 0 1em
+		}
+
+		.blocks-gallery-caption {
+			color: #555;
+			font-size: 13px;
+			text-align: center
+		}
+
+		.is-dark-theme .blocks-gallery-caption {
+			color: hsla(0, 0%, 100%, .65)
+		}
+
+		.wp-block-image figcaption {
+			color: #555;
+			font-size: 13px;
+			text-align: center
+		}
+
+		.is-dark-theme .wp-block-image figcaption {
+			color: hsla(0, 0%, 100%, .65)
+		}
+
+		.wp-block-image {
+			margin: 0 0 1em
+		}
+
+		.wp-block-pullquote {
+			border-bottom: 4px solid;
+			border-top: 4px solid;
+			color: currentColor;
+			margin-bottom: 1.75em
+		}
+
+		.wp-block-pullquote cite,
+		.wp-block-pullquote footer,
+		.wp-block-pullquote__citation {
+			color: currentColor;
+			font-size: .8125em;
+			font-style: normal;
+			text-transform: uppercase
+		}
+
+		.wp-block-quote {
+			border-left: .25em solid;
+			margin: 0 0 1.75em;
+			padding-left: 1em
+		}
+
+		.wp-block-quote cite,
+		.wp-block-quote footer {
+			color: currentColor;
+			font-size: .8125em;
+			font-style: normal;
+			position: relative
+		}
+
+		.wp-block-quote.has-text-align-right {
+			border-left: none;
+			border-right: .25em solid;
+			padding-left: 0;
+			padding-right: 1em
+		}
+
+		.wp-block-quote.has-text-align-center {
+			border: none;
+			padding-left: 0
+		}
+
+		.wp-block-quote.is-large,
+		.wp-block-quote.is-style-large,
+		.wp-block-quote.is-style-plain {
+			border: none
+		}
+
+		.wp-block-search .wp-block-search__label {
+			font-weight: 700
+		}
+
+		.wp-block-search__button {
+			border: 1px solid #ccc;
+			padding: .375em .625em
+		}
+
+		:where(.wp-block-group.has-background) {
+			padding: 1.25em 2.375em
+		}
+
+		.wp-block-separator.has-css-opacity {
+			opacity: .4
+		}
+
+		.wp-block-separator {
+			border: none;
+			border-bottom: 2px solid;
+			margin-left: auto;
+			margin-right: auto
+		}
+
+		.wp-block-separator.has-alpha-channel-opacity {
+			opacity: 1
+		}
+
+		.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+			width: 100px
+		}
+
+		.wp-block-separator.has-background:not(.is-style-dots) {
+			border-bottom: none;
+			height: 1px
+		}
+
+		.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots) {
+			height: 2px
+		}
+
+		.wp-block-table {
+			margin: 0 0 1em
+		}
+
+		.wp-block-table td,
+		.wp-block-table th {
+			word-break: normal
+		}
+
+		.wp-block-table figcaption {
+			color: #555;
+			font-size: 13px;
+			text-align: center
+		}
+
+		.is-dark-theme .wp-block-table figcaption {
+			color: hsla(0, 0%, 100%, .65)
+		}
+
+		.wp-block-video figcaption {
+			color: #555;
+			font-size: 13px;
+			text-align: center
+		}
+
+		.is-dark-theme .wp-block-video figcaption {
+			color: hsla(0, 0%, 100%, .65)
+		}
+
+		.wp-block-video {
+			margin: 0 0 1em
+		}
+
+		.wp-block-template-part.has-background {
+			margin-bottom: 0;
+			margin-top: 0;
+			padding: 1.25em 2.375em
+		}
+	</style>
+	<link rel='stylesheet' id='wc-blocks-vendors-style-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=9.6.6'
+		media='all' />
+	<link rel='stylesheet' id='wc-blocks-style-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=9.6.6'
+		media='all' />
+	<link rel='stylesheet' id='classic-theme-styles-css'
+		href='https://themexriver.com/wp/orixy/wp-includes/css/classic-themes.min.css?ver=6.2' media='all' />
+	<style id='global-styles-inline-css'>
+		body {
+			--wp--preset--color--black: #000000;
+			--wp--preset--color--cyan-bluish-gray: #abb8c3;
+			--wp--preset--color--white: #ffffff;
+			--wp--preset--color--pale-pink: #f78da7;
+			--wp--preset--color--vivid-red: #cf2e2e;
+			--wp--preset--color--luminous-vivid-orange: #ff6900;
+			--wp--preset--color--luminous-vivid-amber: #fcb900;
+			--wp--preset--color--light-green-cyan: #7bdcb5;
+			--wp--preset--color--vivid-green-cyan: #00d084;
+			--wp--preset--color--pale-cyan-blue: #8ed1fc;
+			--wp--preset--color--vivid-cyan-blue: #0693e3;
+			--wp--preset--color--vivid-purple: #9b51e0;
+			--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+			--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+			--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+			--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+			--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+			--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+			--wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+			--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+			--wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+			--wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+			--wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+			--wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+			--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+			--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+			--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+			--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+			--wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+			--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+			--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+			--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+			--wp--preset--font-size--small: 13px;
+			--wp--preset--font-size--medium: 20px;
+			--wp--preset--font-size--large: 36px;
+			--wp--preset--font-size--x-large: 42px;
+			--wp--preset--spacing--20: 0.44rem;
+			--wp--preset--spacing--30: 0.67rem;
+			--wp--preset--spacing--40: 1rem;
+			--wp--preset--spacing--50: 1.5rem;
+			--wp--preset--spacing--60: 2.25rem;
+			--wp--preset--spacing--70: 3.38rem;
+			--wp--preset--spacing--80: 5.06rem;
+			--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+			--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+			--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+		}
+
+		:where(.is-layout-flex) {
+			gap: 0.5em;
+		}
+
+		body .is-layout-flow>.alignleft {
+			float: left;
+			margin-inline-start: 0;
+			margin-inline-end: 2em;
+		}
+
+		body .is-layout-flow>.alignright {
+			float: right;
+			margin-inline-start: 2em;
+			margin-inline-end: 0;
+		}
+
+		body .is-layout-flow>.aligncenter {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained>.alignleft {
+			float: left;
+			margin-inline-start: 0;
+			margin-inline-end: 2em;
+		}
+
+		body .is-layout-constrained>.alignright {
+			float: right;
+			margin-inline-start: 2em;
+			margin-inline-end: 0;
+		}
+
+		body .is-layout-constrained>.aligncenter {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+			max-width: var(--wp--style--global--content-size);
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained>.alignwide {
+			max-width: var(--wp--style--global--wide-size);
+		}
+
+		body .is-layout-flex {
+			display: flex;
+		}
+
+		body .is-layout-flex {
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		body .is-layout-flex>* {
+			margin: 0;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		.has-black-color {
+			color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-color {
+			color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-color {
+			color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-color {
+			color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-color {
+			color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-color {
+			color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-color {
+			color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-color {
+			color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-color {
+			color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-color {
+			color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-color {
+			color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-color {
+			color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-background-color {
+			background-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-background-color {
+			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-background-color {
+			background-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-background-color {
+			background-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-background-color {
+			background-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-background-color {
+			background-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-background-color {
+			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-background-color {
+			background-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-border-color {
+			border-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-border-color {
+			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-border-color {
+			border-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-border-color {
+			border-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-border-color {
+			border-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-border-color {
+			border-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-border-color {
+			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-border-color {
+			border-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+		}
+
+		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+		}
+
+		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+		}
+
+		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+		}
+
+		.has-cool-to-warm-spectrum-gradient-background {
+			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+		}
+
+		.has-blush-light-purple-gradient-background {
+			background: var(--wp--preset--gradient--blush-light-purple) !important;
+		}
+
+		.has-blush-bordeaux-gradient-background {
+			background: var(--wp--preset--gradient--blush-bordeaux) !important;
+		}
+
+		.has-luminous-dusk-gradient-background {
+			background: var(--wp--preset--gradient--luminous-dusk) !important;
+		}
+
+		.has-pale-ocean-gradient-background {
+			background: var(--wp--preset--gradient--pale-ocean) !important;
+		}
+
+		.has-electric-grass-gradient-background {
+			background: var(--wp--preset--gradient--electric-grass) !important;
+		}
+
+		.has-midnight-gradient-background {
+			background: var(--wp--preset--gradient--midnight) !important;
+		}
+
+		.has-small-font-size {
+			font-size: var(--wp--preset--font-size--small) !important;
+		}
+
+		.has-medium-font-size {
+			font-size: var(--wp--preset--font-size--medium) !important;
+		}
+
+		.has-large-font-size {
+			font-size: var(--wp--preset--font-size--large) !important;
+		}
+
+		.has-x-large-font-size {
+			font-size: var(--wp--preset--font-size--x-large) !important;
+		}
+
+		.wp-block-navigation a:where(:not(.wp-element-button)) {
+			color: inherit;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		.wp-block-pullquote {
+			font-size: 1.5em;
+			line-height: 1.6;
+		}
+	</style>
+	<link rel='stylesheet' id='contact-form-7-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.7.5.1'
+		media='all' />
+	<link rel='stylesheet' id='woocommerce-layout-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=7.5.1'
+		media='all' />
+	<link rel='stylesheet' id='woocommerce-smallscreen-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=7.5.1'
+		media='only screen and (max-width: 768px)' />
+	<link rel='stylesheet' id='woocommerce-general-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=7.5.1'
+		media='all' />
+	<style id='woocommerce-inline-inline-css'>
+		.woocommerce form .form-row .required {
+			visibility: visible;
+		}
+	</style>
+	<link rel='stylesheet' id='hfe-style-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.6.13'
+		media='all' />
+	<link rel='stylesheet' id='elementor-icons-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.18.0'
+		media='all' />
+	<link rel='stylesheet' id='elementor-frontend-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.12.1'
+		media='all' />
+	<link rel='stylesheet' id='swiper-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5'
+		media='all' />
+	<link rel='stylesheet' id='elementor-post-6-css'
+		href='https://themexriver.com/wp/orixy/wp-content/uploads/elementor/css/post-6.css?ver=1681119163'
+		media='all' />
+	<link rel='stylesheet' id='elementor-global-css'
+		href='https://themexriver.com/wp/orixy/wp-content/uploads/elementor/css/global.css?ver=1681119171'
+		media='all' />
+	<link rel='stylesheet' id='elementor-post-1380-css'
+		href='https://themexriver.com/wp/orixy/wp-content/uploads/elementor/css/post-1380.css?ver=1681119174'
+		media='all' />
+	<link rel='stylesheet' id='hfe-widgets-style-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.6.13'
+		media='all' />
+	<link rel='stylesheet' id='orixy-googlefonts-css'
+		href='https://fonts.googleapis.com/css?family=Arimo%3A400%2C500%2C600%2C700%7CJost%3A200%2C400%2C500%2C600%2C700%2C800%7COswald%3A300%2C400%2C500%2C600%2C700%7CPoppins%3A300%2C400%2C500%2C600%2C700%7CUnbounded%3A200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CNunito%3A400%2C500%2C600%2C700%7CRubik%3A400%2C500%2C600%2C700&#038;subset=latin%2Clatin-ext'
+		media='all' />
+	<link rel='stylesheet' id='e-animations-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/e-animations.css?ver=6.2'
+		media='all' />
+	<link rel='stylesheet' id='blog-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/blog.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='bootstrap-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/bootstrap.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='flaticon-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/flaticon.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='fontawesome-all-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/fontawesome-all.css?ver=6.2'
+		media='all' />
+	<link rel='stylesheet' id='global-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/global.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='jquery-ui-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/jquery-ui.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='nice-select-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/nice-select.css?ver=6.2'
+		media='all' />
+	<link rel='stylesheet' id='odometer-theme-default-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/odometer-theme-default.css?ver=6.2'
+		media='all' />
+	<link rel='stylesheet' id='rs6-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/rs6.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='slick-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/slick.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='slick-theme-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/slick-theme.css?ver=6.2'
+		media='all' />
+	<link rel='stylesheet' id='splitting-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/splitting.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='style-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/style.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='video-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/video.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='default-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/default.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='hover-img-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/css/hover-img.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='orixy-style-css'
+		href='https://themexriver.com/wp/orixy/wp-content/themes/orixy/style.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='elementor-icons-flaticon-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/orixy-addon/assets/flaticon/flaticon.css?ver=3.0.1'
+		media='all' />
+	<link rel='stylesheet' id='dashicons-css'
+		href='https://themexriver.com/wp/orixy/wp-includes/css/dashicons.min.css?ver=6.2' media='all' />
+	<link rel='stylesheet' id='google-fonts-1-css'
+		href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CUnbounded%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.2'
+		media='all' />
+	<link rel='stylesheet' id='elementor-icons-shared-0-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3'
+		media='all' />
+	<link rel='stylesheet' id='elementor-icons-fa-solid-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3'
+		media='all' />
+	<link rel='stylesheet' id='elementor-icons-fa-brands-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3'
+		media='all' />
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<script src='https://themexriver.com/wp/orixy/wp-includes/js/jquery/jquery.min.js?ver=3.6.3'
+		id='jquery-core-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0'
+		id='jquery-migrate-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-includes/js/imagesloaded.min.js?ver=4.1.4'
+		id='imagesloaded-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-includes/js/masonry.min.js?ver=4.2.2' id='masonry-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/bootstrap.js?ver=6.2'
+		id='bootstrap-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/appear.js?ver=6.2'
+		id='appear-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/imagesloaded.pkgd.js?ver=6.2'
+		id='imagesloaded.pkgd-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/swiper.js?ver=6.2'
+		id='swiper-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/jarallax.js?ver=6.2'
+		id='jarallax-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/jquery.filterizr.js?ver=6.2'
+		id='jquery.filterizr-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/jquery.counterup.js?ver=6.2'
+		id='jquery.counterup-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/jquery.magnific-popup.js?ver=6.2'
+		id='jquery.magnific-popup-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/jquery.marquee.js?ver=6.2'
+		id='jquery.marquee-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/knob.js?ver=6.2'
+		id='knob-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/popper.js?ver=6.2'
+		id='popper-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/slick.js?ver=6.2'
+		id='slick-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/typer.js?ver=6.2'
+		id='typer-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/waypoints.js?ver=6.2'
+		id='waypoints-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/wow.js?ver=6.2'
+		id='wow-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/script.js?ver=6.2'
+		id='script-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/twin.js?ver=6.2'
+		id='twin-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/charming.min.js?ver=6.2'
+		id='charming.min-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/hover-img.js?ver=6.2'
+		id='hover-img-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/themes/orixy/assets/js/typeit.js?ver=6.2'
+		id='typeit-js'></script>
+	<link rel="https://api.w.org/" href="https://themexriver.com/wp/orixy/wp-json/" />
+	<link rel="alternate" type="application/json" href="https://themexriver.com/wp/orixy/wp-json/wp/v2/pages/1380" />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://themexriver.com/wp/orixy/xmlrpc.php?rsd" />
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml"
+		href="https://themexriver.com/wp/orixy/wp-includes/wlwmanifest.xml" />
+	<meta name="generator" content="WordPress 6.2" />
+	<meta name="generator" content="WooCommerce 7.5.1" />
+	<link rel="canonical" href="https://themexriver.com/wp/orixy/" />
+	<link rel='shortlink' href='https://themexriver.com/wp/orixy/' />
+	<link rel="alternate" type="application/json+oembed"
+		href="https://themexriver.com/wp/orixy/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthemexriver.com%2Fwp%2Forixy%2F" />
+	<link rel="alternate" type="text/xml+oembed"
+		href="https://themexriver.com/wp/orixy/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fthemexriver.com%2Fwp%2Forixy%2F&#038;format=xml" />
+	<style>
+		.scrollup {
+			background-color: ;
+		}
+	</style>
+	<noscript>
+		<style>
+			.woocommerce-product-gallery {
+				opacity: 1 !important;
+			}
+		</style>
+	</noscript>
+	
+	<script>function setREVStartSize(e) {
+			//window.requestAnimationFrame(function() {
+			window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
+			window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
+			try {
+				var pw = document.getElementById(e.c).parentNode.offsetWidth,
+					newh;
+				pw = pw === 0 || isNaN(pw) ? window.RSIW : pw;
+				e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
+				e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
+				e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
+				e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
+				e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
+				e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
+				e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
+				if (e.layout === "fullscreen" || e.l === "fullscreen")
+					newh = Math.max(e.mh, window.RSIH);
+				else {
+					e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+					for (var i in e.rl) if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
+					e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
+					e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+					for (var i in e.rl) if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
+
+					var nl = new Array(e.rl.length),
+						ix = 0,
+						sl;
+					e.tabw = e.tabhide >= pw ? 0 : e.tabw;
+					e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
+					e.tabh = e.tabhide >= pw ? 0 : e.tabh;
+					e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
+					for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
+					sl = nl[0];
+					for (var i in nl) if (sl > nl[i] && nl[i] > 0) { sl = nl[i]; ix = i; }
+					var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
+					newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
+				}
+				var el = document.getElementById(e.c);
+				if (el !== null && el) el.style.height = newh + "px";
+				el = document.getElementById(e.c + "_wrapper");
+				if (el !== null && el) {
+					el.style.height = newh + "px";
+					el.style.display = "block";
+				}
+			} catch (e) {
+				console.log("Failure at Presize of Slider:" + e)
+			}
+			//});
+		};</script>
+</head>
+
+<body
+	class="home page-template page-template-orixy-template page-template-orixy-template-php page page-id-1380 theme-orixy orix-home woocommerce-no-js ehf-template-orixy ehf-stylesheet-orixy elementor-default elementor-kit-6 elementor-page elementor-page-1380">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-dark-grayscale">
+				<feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<feComponentTransfer color-interpolation-filters="sRGB">
+					<feFuncR type="table" tableValues="0 0.49803921568627" />
+					<feFuncG type="table" tableValues="0 0.49803921568627" />
+					<feFuncB type="table" tableValues="0 0.49803921568627" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-grayscale">
+				<feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<feComponentTransfer color-interpolation-filters="sRGB">
+					<feFuncR type="table" tableValues="0 1" />
+					<feFuncG type="table" tableValues="0 1" />
+					<feFuncB type="table" tableValues="0 1" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-purple-yellow">
+				<feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<feComponentTransfer color-interpolation-filters="sRGB">
+					<feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+					<feFuncG type="table" tableValues="0 1" />
+					<feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-blue-red">
+				<feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<feComponentTransfer color-interpolation-filters="sRGB">
+					<feFuncR type="table" tableValues="0 1" />
+					<feFuncG type="table" tableValues="0 0.27843137254902" />
+					<feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-midnight">
+				<feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<feComponentTransfer color-interpolation-filters="sRGB">
+					<feFuncR type="table" tableValues="0 0" />
+					<feFuncG type="table" tableValues="0 0.64705882352941" />
+					<feFuncB type="table" tableValues="0 1" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-magenta-yellow">
+				<feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<feComponentTransfer color-interpolation-filters="sRGB">
+					<feFuncR type="table" tableValues="0.78039215686275 1" />
+					<feFuncG type="table" tableValues="0 0.94901960784314" />
+					<feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-purple-green">
+				<feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<feComponentTransfer color-interpolation-filters="sRGB">
+					<feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+					<feFuncG type="table" tableValues="0 1" />
+					<feFuncB type="table" tableValues="0.44705882352941 0.4" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+		<defs>
+			<filter id="wp-duotone-blue-orange">
+				<feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+					values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+				<feComponentTransfer color-interpolation-filters="sRGB">
+					<feFuncR type="table" tableValues="0.098039215686275 1" />
+					<feFuncG type="table" tableValues="0 0.66274509803922" />
+					<feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+					<feFuncA type="table" tableValues="1 1" />
+				</feComponentTransfer>
+				<feComposite in2="SourceGraphic" operator="in" />
+			</filter>
+		</defs>
+	</svg>
+	<!-- <div id="preloader"></div> -->
+	<div class="up">
+		<a href="#" class="scrollup text-center"><i class="fas fa-chevron-up"></i></a>
+	</div>
+	<div id="page" class="site">
+		<div data-elementor-type="wp-post" data-elementor-id="1744" class="elementor elementor-1744">
+			<section
+				class="elementor-section elementor-top-section elementor-element elementor-element-cc54533 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+				data-id="cc54533" data-element_type="section">
+				<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-de4331e"
+						data-id="de4331e" data-element_type="column">
+						<div class="elementor-widget-wrap elementor-element-populated">
+							<div class="elementor-element elementor-element-0c0f0f1 elementor-widget elementor-widget-orihdr10"
+								data-id="0c0f0f1" data-element_type="widget" data-widget_type="orihdr10.default">
+								<div class="elementor-widget-container">
+									<header id="orix-header" class="orix-header-section">
+										<div class="container">
+											<div
+												class="orix-header-content d-flex align-items-center justify-content-between">
+												<div class="brand-logo">
+													<a href=""><img
+															src="./C&M logo.png" width="100px"
+															alt=""></a>
+												</div>
+												<div class="orix-main-menu-navigation">
+													<nav class="ori-main-navigation clearfix ul-li">
+														<div class="menu-menu-1-container">
+															<ul id="main-nav" class="nav navbar-nav clearfix">
+																<li id="menu-item-1966"
+																	class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1380 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor  menu-item-1966">
+																	<a href="#home"
+																		aria-current="page">Home</a>
+																	
+																</li>
+																<li id="menu-item-1301"
+																	class="menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-1301">
+																	<a href="#about">About</a>
+																	
+																</li>
+																<li id="menu-item-405"
+																	class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-405">
+																	<a href="#services">Services</a>
+																	
+																</li>
+																<li id="menu-item-407"
+																	class="menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-407">
+																	<a href="#stats">Stats</a>
+																</li>
+																<li id="menu-item-408"
+																	class="menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-408">
+																	<a href="#faq">FAQ</a>
+																	
+																</li>
+															</ul>
+														</div>
+													</nav>
+												</div>
+												<div class="orix-header-cta-btn-area d-flex align-items-center">
+													<div class="orix-cta-icon-text d-flex aling-items-center ">
+														<div
+															class="inner-icon d-flex align-items-center  justify-content-center">
+															<i class="fas fa-phone-alt"></i>
+														</div>
+														<div class="inner-text">
+															<span>Give us a call</span>
+															<a href="tell:Give us a call">+585 943 4549</a>
+														</div>
+													</div>
+													<div class="orix-heade-btn">
+														<a href="#plans">Our Offerings</a>
+													</div>
+												</div>
+											</div>
+											<div class="mobile_menu position-relative" >
+												<div class="mobile_menu_button open_mobile_menu" style="margin-top: -28px;">
+													<i class="fa-solid fa-bars"></i>
+												</div>
+												<div class="mobile_menu_wrap">
+													<div class="mobile_menu_overlay open_mobile_menu"></div>
+													<div class="mobile_menu_content">
+														<div class="mobile_menu_close open_mobile_menu">
+														</div>
+														<div class="m-brand-logo">
+															<a href=""><img
+																	src="./C&M logo.png" width="80px"
+																	alt=""></a>
+														</div>
+														<nav class="mobile-main-navigation  clearfix ul-li">
+															<div class="menu-menu-1-container">
+																<ul id="main-nav" class="nav navbar-nav clearfix">
+																	<li
+																		class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1380 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-1966">
+																		<a href="#home"
+																			aria-current="page">Home</a>
+																		
+																	</li>
+																	<li
+																		class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1301">
+																		<a href="#about">About</a>
+																		
+																	</li>
+																	<li
+																		class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-405">
+																		<a href="#services">Services</a>
+																		
+																	</li>
+																	<li
+																		class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-407">
+																		<a href="#stats">Stats</a>
+																		
+																	</li>
+																	<li
+																		class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-408">
+																		<a href="#faq">FAQ</a>
+																		
+																	</li>
+																</ul>
+															</div>
+														</nav>
+													</div>
+												</div>
+												<!-- /Mobile-Menu -->
+											</div>
+										</div>
+									</header>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div id="content" class="site-content">
+
+			<div class="clearfix"></div>
+
+			<div id="elementor_page_builder">
+				<div data-elementor-type="wp-page" data-elementor-id="1380" class="elementor elementor-1380">
+					<section id="home"
+						class="elementor-section elementor-top-section elementor-element elementor-element-18baca7 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+						data-id="18baca7" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-70374ab"
+								data-id="70374ab" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-c2ab097 elementor-widget elementor-widget-orislidermain"
+										data-id="c2ab097" data-element_type="widget"
+										data-widget_type="orislidermain.default">
+										<div class="elementor-widget-container">
+											<section id="orix-main-slider" class="orix-main-slider-section">
+												<div class="orix-main-slider-content position-relative">
+													<div class="orix-main-slider-area">
+														<div class="orix-main-slider-item position-relative">
+															<div class="orix-slider-round-1 position-absolute">
+																
+															</div>
+															<div class="orix-slider-round-2 position-absolute">
+																<img decoding="async"
+																	src="./10181.jpg"
+																	alt="">
+															</div>
+															<div class="container">
+																<div class="orix-main-slider-text pera-content">
+																	<div class="slider-slug text-uppercase">
+																		C&M Garbage Cleaning  </div>
+																	<h1>Wash off grime and save yourself time.</h1>
+																	<p>Discover a new level of cleanliness with C&M Garbage Cleaning!</p>
+																	
+																</div>
+															</div>
+														</div>
+														
+													</div>
+													
+												</div>
+											</section>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="about"
+						class="elementor-section elementor-top-section elementor-element elementor-element-5c4820e elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+						data-id="5c4820e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d35ee8d"
+								data-id="d35ee8d" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-1e0db73 elementor-widget elementor-widget-image"
+										data-id="1e0db73" data-element_type="widget" data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<style>
+												/*! elementor - v3.12.1 - 02-04-2023 */
+												.elementor-widget-image {
+													text-align: center
+												}
+
+												.elementor-widget-image a {
+													display: inline-block
+												}
+
+												.elementor-widget-image a img[src$=".svg"] {
+													width: 48px
+												}
+
+												.elementor-widget-image img {
+													vertical-align: middle;
+													display: inline-block
+												}
+											</style> <img decoding="async" width="530" height="540"
+												src="./3725847.jpg"
+												class="attachment-full size-full wp-image-1412" alt="" loading="lazy"
+												
+												sizes="(max-width: 530px) 100vw, 530px" />
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-c48b785 elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+										data-id="c48b785" data-element_type="widget"
+										data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInLeft&quot;}"
+										data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d88b351"
+								data-id="d88b351" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-cc4c880 elementor-widget elementor-widget-oriheading"
+										data-id="cc4c880" data-element_type="widget"
+										data-settings="{&quot;design_style&quot;:&quot;style_1&quot;}"
+										data-widget_type="oriheading.default">
+										<div class="elementor-widget-container">
+											<div class="orix-section-title text-left pera-content wow fadeInUp"
+												data-wow-delay="300ms" data-wow-duration="1000ms">
+												<div class="subtitle text-uppercase">
+													Experience the C&M difference </div>
+												<h2>Getting the job done right for a price you like</h2>
+												<p>Trust us to create a clean, fresh, and sanitary environment for you and your loved ones. </p>
+											</div>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-fc03f2e elementor-widget elementor-widget-oriliststyle"
+										data-id="fc03f2e" data-element_type="widget"
+										data-widget_type="oriliststyle.default">
+										<div class="elementor-widget-container">
+											<div class="orix-about-feature-wrapper ul-li-block wow fadeInUp"
+												data-wow-delay="350ms" data-wow-duration="1000ms">
+												<ul>
+													<li><i aria-hidden="true" class="fas fa-check-circle"></i> Transforming Spaces with Sparkling Precision!</li>
+													<li><i aria-hidden="true" class="fas fa-check-circle"></i> Your Trusted Partner for Hygiene and Shine!</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</section>
+					<section
+						class="elementor-section elementor-top-section elementor-element elementor-element-b2efb52 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+						data-id="b2efb52" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-bd30efe"
+								data-id="bd30efe" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-70c19fa elementor-absolute elementor-widget-tablet__width-initial elementor-widget elementor-widget-image"
+										data-id="70c19fa" data-element_type="widget"
+										data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
+										data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<img decoding="async" width="1920" height="1230"
+												src="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round1.png"
+												class="attachment-full size-full wp-image-1465" alt="" loading="lazy"
+												srcset="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round1.png 1920w, https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round1-600x384.png 600w, https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round1-300x192.png 300w, https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round1-1024x656.png 1024w, https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round1-768x492.png 768w, https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round1-1536x984.png 1536w"
+												sizes="(max-width: 1920px) 100vw, 1920px" />
+										</div>
+									</div>
+									<section
+										class="elementor-section elementor-inner-section elementor-element elementor-element-cd69ab5 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+										data-id="cd69ab5" data-element_type="section">
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-aae5f9a"
+												data-id="aae5f9a" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-03488f2 elementor-widget elementor-widget-image"
+														data-id="03488f2" data-element_type="widget"
+														data-widget_type="image.default">
+														<div class="elementor-widget-container">
+															<img decoding="async" width="471" height="466"
+																src="./pngwing.com (1).png"
+																class="attachment-large size-large wp-image-1762" alt=""
+																loading="lazy"
+																
+																sizes="(max-width: 471px) 100vw, 471px" />
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d577eaf"
+												data-id="d577eaf" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-68a831b elementor-widget elementor-widget-oriserv8"
+														data-id="68a831b" data-element_type="widget"
+														data-widget_type="oriserv8.default">
+														<div class="elementor-widget-container">
+															<div class="orix-service-list-item-area  ul-li-block wow fadeInUp"
+																data-wow-delay="300ms" data-wow-duration="1500ms">
+																<div data-fx="6">
+																	<a style="pointer-events: none;" href="#"
+																		data-img="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/pro1.jpg"><span
+																			class="service-serial-no">01</span><span
+																			class="service-title">Customized Cleaning Solutions</span></a>
+																	<a style="pointer-events: none;" href="#"
+																		data-img="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/pro2.jpg"><span
+																			class="service-serial-no">02</span><span
+																			class="service-title">Environmentally Friendly Approach</span></a>
+																	<a style="pointer-events: none;" href="#"
+																		data-img="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/pro2.jpg"><span
+																			class="service-serial-no">03</span><span
+																			class="service-title">Cutting-Edge Technology</span></a>
+																	<a style="pointer-events: none;" href="#"
+																		data-img="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/pro2.jpg"><span
+																			class="service-serial-no">04</span><span
+																			class="service-title">Trained and Professional Team</span></a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="stats"
+						class="elementor-section elementor-top-section elementor-element elementor-element-fc91d0f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+						data-id="fc91d0f"  data-element_type="section">
+						<div style="justify-content: center;" class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-debdc2e"
+								data-id="debdc2e" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-c48652f elementor-widget elementor-widget-oricounter"
+										data-id="c48652f" data-element_type="widget"
+										data-widget_type="oricounter.default">
+										<div class="elementor-widget-container">
+											<div class="orix-fun-fact-item d-flex">
+												<div
+													class="fun-fact-icon d-flex justify-content-center align-items-center">
+													<i aria-hidden="true" class="fas fa-users"></i>
+												</div>
+												<div class="fun-fact-text pera-content">
+													<h3> <span class="counter">1</span>K</h3>
+													<p class="text-uppercase">Happy Customers</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-b0c47de"
+								data-id="b0c47de" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-115fc43 elementor-widget elementor-widget-oricounter"
+										data-id="115fc43" data-element_type="widget"
+										data-widget_type="oricounter.default">
+										<div class="elementor-widget-container">
+											<div class="orix-fun-fact-item d-flex">
+												<div
+													class="fun-fact-icon d-flex justify-content-center align-items-center">
+													<i aria-hidden="true" class="fas fa-users"></i>
+												</div>
+												<div class="fun-fact-text pera-content">
+													<h3> <span class="counter">2</span>+</h3>
+													<p class="text-uppercase">Years of Experience</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</section>
+					
+					<section id="services"
+						class="elementor-section elementor-top-section elementor-element elementor-element-e162110 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+						data-id="e162110" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3fd12cd"
+								data-id="3fd12cd" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-9e95c55 elementor-widget elementor-widget-oriheading"
+										data-id="9e95c55" data-element_type="widget"
+										data-settings="{&quot;design_style&quot;:&quot;style_1&quot;}"
+										data-widget_type="oriheading.default">
+										<div class="elementor-widget-container">
+											<div class="orix-section-title text-center pera-content wow fadeInUp"
+												data-wow-delay="300ms" data-wow-duration="1000ms">
+												
+												<h2>Cleaning Services</h2>
+											</div>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-a48e730 elementor-widget elementor-widget-oriproject5"
+										data-id="a48e730" data-element_type="widget"
+										data-widget_type="oriproject5.default">
+										<div class="elementor-widget-container">
+											<div class="orix-project-content">
+												<div class="orix-project-item-area">
+													<div class="orix-project-item left-img-align position-relative wow fadeInUp"
+														data-wow-delay="200ms" data-wow-duration="1500ms">
+														<div class="project-img">
+															<img decoding="async"
+																src="./bin.png"
+																alt="">
+														</div>
+														<div class="project-text-area ul-li-block">
+															<div class="project-text">
+																<h3><a
+																		href="#">Cleaning Residential Bins</a></h3>
+																
+																	<li>Thorough cleaning of residential garbage bins</li>
+																	<li>Removal of waste residue</li>
+																	<li>Sanitization to maintain cleanliness</li>
+																
+																
+															</div>
+														</div>
+													</div>
+													<div class="orix-project-item right-img-align position-relative wow fadeInUp"
+														data-wow-delay="200ms" data-wow-duration="1500ms">
+														<div class="project-img">
+															<img decoding="async"
+																src="./bubble.png"
+																alt="">
+														</div>
+														<div class="project-text-area ul-li-block">
+															<div class="project-text">
+																<h3><a
+																		href="">Bubble Spray</a></h3>
+																
+																	<li>Innovative bubble spray solution for effective cleaning</li>
+																	<li>Foamy layer penetrates deep into surfaces, removing dirt and grime</li>
+																	<li>Deodorizes various surfaces</li>
+																
+																
+															</div>
+														</div>
+													</div>
+													<div class="orix-project-item left-img-align position-relative wow fadeInUp"
+														data-wow-delay="200ms" data-wow-duration="1500ms">
+														<div class="project-img">
+															<img decoding="async"
+																src="./mouse.png"
+																alt="">
+														</div>
+														<div class="project-text-area ul-li-block">
+															<div class="project-text">
+																<h3><a
+																		href="">Mouse Repellent</a></h3>
+																
+																	<li>Safe and environmentally friendly</li>
+																	<li>Deters unwanted rodents from your premises</li>
+																	<li>Expert techniques to prevent mouse infestations</li>
+																
+																
+															</div>
+														</div>
+													</div>
+													<div class="orix-project-item right-img-align position-relative wow fadeInUp" data-wow-delay="200ms"
+														data-wow-duration="1500ms">
+														<div class="project-img">
+															<img decoding="async" src="./senitazation.png" alt="">
+														</div>
+														<div class="project-text-area ul-li-block">
+															<div class="project-text">
+																<h3><a href="">Sanitization</a></h3>
+																
+																	<li>Comprehensive disinfection of surfaces</li>
+																	<li>Eliminates harmful bacteria</li>
+																	<li>Uses industry-approved sanitizing</li>
+																
+													
+															</div>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					
+					<section  id="plans"
+						class="elementor-section elementor-top-section elementor-element elementor-element-18fbc94 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+						data-id="18fbc94" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d13863f"
+								data-id="d13863f" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-ae5d7cf elementor-widget elementor-widget-oriheading"
+										data-id="ae5d7cf" data-element_type="widget"
+										data-settings="{&quot;design_style&quot;:&quot;style_1&quot;}"
+										data-widget_type="oriheading.default">
+										<div class="elementor-widget-container">
+											<div class="orix-section-title text-center pera-content wow fadeInUp"
+												data-wow-delay="300ms" data-wow-duration="1000ms">
+												<div class="subtitle text-uppercase">
+													Quality Matters </div>
+												<h2>Our Plans</h2>
+											</div>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-46ac869 elementor-widget elementor-widget-oripricingtab"
+										data-id="46ac869" data-element_type="widget"
+										data-widget_type="oripricingtab.default">
+										<div class="elementor-widget-container">
+											<div class="orix-pricing-content">
+												<div class="row align-items-center">
+													<div class="col-lg-3 wow slideInLeft" data-wow-delay="200ms"
+														data-wow-duration="1000ms">
+														<div class="orix-pricing-btn">
+															<ul class="nav nav-tabs" id="orix-myTab" role="tablist">
+																<li class="nav-item" role="presentation">
+																	<button class="nav-link active"
+																		id="orix_price_a13e387" data-bs-toggle="tab"
+																		data-bs-target="#orix_pirce_btn_a13e387"
+																		type="button" role="tab"
+																		aria-selected="false">Get Daily <i
+																			class="fas fa-arrow-right"></i></button>
+																</li>
+																<li class="nav-item" role="presentation">
+																	<button class="nav-link " id="orix_price_41c44bd"
+																		data-bs-toggle="tab"
+																		data-bs-target="#orix_pirce_btn_41c44bd"
+																		type="button" role="tab"
+																		aria-selected="false">Get Weekly <i
+																			class="fas fa-arrow-right"></i></button>
+																</li>
+																
+															</ul>
+														</div>
+													</div>
+													<div class="col-lg-9">
+														<div class="orix-pricing-tab-content">
+															<div class="tab-content" id="orix-myTab">
+																<div class="tab-pane animated fadeInUp show active"
+																	id="orix_pirce_btn_a13e387" role="tabpanel"
+																	aria-labelledby="gr-orix_price_1-5_a13e387">
+																	<div class="orix-pricing-price-item">
+																		<div class="orix-price-item  position-relative">
+																			<div class="price-img">
+																				<img decoding="async"
+																					src="./plan2.png"
+																					alt="">
+																			</div>
+																			<div class="price-text-area ul-li-block">
+																				<div class="price-text">
+																					<div
+																						class="price-title-price pera-content">
+																						<h3>One-Time</h3>
+																						<p><sup>US$</sup> $34
+																							<sup>.99</sup></p>
+																					</div>
+																					
+																						<li>One-time deep cleaning service</li>
+																						<li>Ideal for special occasions
+																						</li>
+																						<li>Professional team equipped</li>
+																						<li>Removes waste residue
+																						</li>
+																					
+																					
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="tab-pane animated fadeInUp "
+																	id="orix_pirce_btn_41c44bd" role="tabpanel"
+																	aria-labelledby="gr-orix_price_1-5_41c44bd">
+																	<div class="orix-pricing-price-item">
+																		<div class="orix-price-item  position-relative">
+																			<div class="price-img">
+																				<img decoding="async"
+																					src="./plan1.png"
+																					alt="">
+																			</div>
+																			<div class="price-text-area ul-li-block">
+																				<div class="price-text">
+																					<div
+																						class="price-title-price pera-content">
+																						<h3>Biweekly</h3>
+																						<p><sup>US$</sup> 19
+																							<sup>.99</sup></p>
+																					</div>
+																					
+																						<li>Designed for regular maintenance</li>
+																						<li>Convenient and cost-effective
+																						</li>
+																						<li>Scheduled cleaning visits</li>
+																						<li>Helps prevent buildup of dirt
+																						</li>
+																					
+																					
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section
+						class="elementor-section elementor-top-section elementor-element elementor-element-46264cc elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+						data-id="46264cc" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f20a6df"
+								data-id="f20a6df" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-3f95f66 elementor-absolute elementor-widget-tablet__width-initial elementor-widget elementor-widget-image"
+										data-id="3f95f66" data-element_type="widget"
+										data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
+										data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<img decoding="async" width="1920" height="1128"
+												src="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round3.png"
+												class="attachment-full size-full wp-image-1629" alt="" loading="lazy"
+												srcset="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round3.png 1920w, https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round3-600x353.png 600w, https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round3-300x176.png 300w, https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round3-1024x602.png 1024w, https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round3-768x451.png 768w, https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/round3-1536x902.png 1536w"
+												sizes="(max-width: 1920px) 100vw, 1920px" />
+										</div>
+									</div>
+									<section
+										class="elementor-section elementor-inner-section elementor-element elementor-element-1b7d2fd elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+										data-id="1b7d2fd" data-element_type="section">
+										<div class="elementor-container elementor-column-gap-default">
+											<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-d205604"
+												data-id="d205604" data-element_type="column">
+												<div class="elementor-widget-wrap elementor-element-populated">
+													<div class="elementor-element elementor-element-84b8ea6 elementor-widget elementor-widget-oritestim8"
+														data-id="84b8ea6" data-element_type="widget"
+														data-widget_type="oritestim8.default">
+														<div class="elementor-widget-container">
+															<div class="orix-testimonial-content position-relative">
+																<div class="orix-testimonial-btn-grp">
+																	<ul class="nav nav-tabs" id="orix-TestiTab"
+																		role="tablist">
+																		<li class="nav-item" role="presentation">
+																			<button class="nav-link active"
+																				id="orix_testi_500188e"
+																				data-bs-toggle="tab"
+																				data-bs-target="#orix_testi_btn_500188e"
+																				type="button" role="tab"
+																				aria-selected="false"><img
+																					decoding="async"
+																					src="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/tn1.png"
+																					alt=""></button>
+																		</li>
+																		<li class="nav-item" role="presentation">
+																			<button class="nav-link "
+																				id="orix_testi_9e038f7"
+																				data-bs-toggle="tab"
+																				data-bs-target="#orix_testi_btn_9e038f7"
+																				type="button" role="tab"
+																				aria-selected="false"><img
+																					decoding="async"
+																					src="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/tn2.png"
+																					alt=""></button>
+																		</li>
+																		<li class="nav-item" role="presentation">
+																			<button class="nav-link "
+																				id="orix_testi_916b95d"
+																				data-bs-toggle="tab"
+																				data-bs-target="#orix_testi_btn_916b95d"
+																				type="button" role="tab"
+																				aria-selected="false"><img
+																					decoding="async"
+																					src="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/tn3.png"
+																					alt=""></button>
+																		</li>
+																		<li class="nav-item" role="presentation">
+																			<button class="nav-link "
+																				id="orix_testi_e604fd1"
+																				data-bs-toggle="tab"
+																				data-bs-target="#orix_testi_btn_e604fd1"
+																				type="button" role="tab"
+																				aria-selected="false"><img
+																					decoding="async"
+																					src="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/tn4.png"
+																					alt=""></button>
+																		</li>
+																	</ul>
+																</div>
+																<div class="orix-testimonial-tab-content">
+																	<div class="tab-content" id="orix-TestiTab">
+																		<div class="tab-pane animated fadeInUp show active "
+																			id="orix_testi_btn_500188e" role="tabpanel"
+																			aria-labelledby="orix_testi_500188e">
+																			<div
+																				class="orix-testimonial-img-text d-flex align-items-end">
+																				<div class="orix-testimonial-img">
+																					<img decoding="async"
+																						src="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/testi1.png"
+																						alt="">
+																				</div>
+																				<div class="orix-testimonial-text-area">
+																					<div class="quote-icon">“</div>
+																					<div class="orix-testimonial-text">
+																						C&M Garbage Cleaning is the best in the business when it comes to sanitization. As a health-conscious individual, I
+																						wanted to ensure my home was free from harmful bacteria and viruses. Their sanitization service exceeded my
+																						expectations. </div>
+																					<div class="orix-author-area">
+																						<span class="author-name">
+																							Michael R </span>
+																						<span class="author-degi">
+																							Director </span>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="tab-pane animated fadeInUp  "
+																			id="orix_testi_btn_9e038f7" role="tabpanel"
+																			aria-labelledby="orix_testi_9e038f7">
+																			<div
+																				class="orix-testimonial-img-text d-flex align-items-end">
+																				<div class="orix-testimonial-img">
+																					<img decoding="async"
+																						src="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/testi2.png"
+																						alt="">
+																				</div>
+																				<div class="orix-testimonial-text-area">
+																					<div class="quote-icon">“</div>
+																					<div class="orix-testimonial-text">
+																						I was struggling with a persistent mouse problem in my business premises until I hired C&M Garbage Cleaning. Their mouse
+																						repellent service worked like magic. I haven't seen a single mouse since they implemented their techniques.  Thank you, C&M Garbage Cleaning! </div>
+																					<div class="orix-author-area">
+																						<span class="author-name">
+																							Anthony Jhone </span>
+																						<span class="author-degi">
+																							CEO, Alico Group </span>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="tab-pane animated fadeInUp  "
+																			id="orix_testi_btn_916b95d" role="tabpanel"
+																			aria-labelledby="orix_testi_916b95d">
+																			<div
+																				class="orix-testimonial-img-text d-flex align-items-end">
+																				<div class="orix-testimonial-img">
+																					<img decoding="async"
+																						src="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/testi3.png"
+																						alt="">
+																				</div>
+																				<div class="orix-testimonial-text-area">
+																					<div class="quote-icon">“</div>
+																					<div class="orix-testimonial-text">
+																						C&M Garbage Cleaning has been a lifesaver for me. With their biweekly cleaning plan, I no longer have to worry about
+																						maintaining a clean home.  Not only do they
+																						sanitize my bins, but they also make sure every surface is spotless. I can't recommend them enough! </div>
+																					<div class="orix-author-area">
+																						<span class="author-name">
+																							Mark S </span>
+																						<span class="author-degi">
+																							Developer </span>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="tab-pane animated fadeInUp  "
+																			id="orix_testi_btn_e604fd1" role="tabpanel"
+																			aria-labelledby="orix_testi_e604fd1">
+																			<div
+																				class="orix-testimonial-img-text d-flex align-items-end">
+																				<div class="orix-testimonial-img">
+																					<img decoding="async"
+																						src="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/testi1.png"
+																						alt="">
+																				</div>
+																				<div class="orix-testimonial-text-area">
+																					<div class="quote-icon">“</div>
+																					<div class="orix-testimonial-text">
+																						I couldn't be happier with the cleaning services provided by C&M Garbage Cleaning. Their team was professional,
+																						thorough, and left my bins sparkling clean. I highly recommend their services for anyone looking for top-notch cleaning! </div>
+																					<div class="orix-author-area">
+																						<span class="author-name">
+																							Jessica W. </span>
+																						<span class="author-degi">
+																							SEO Expert </span>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="faq"
+						class="elementor-section elementor-top-section elementor-element elementor-element-f594f13 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+						data-id="f594f13" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-95f17da"
+								data-id="95f17da" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-85a1e1a elementor-widget elementor-widget-image"
+										data-id="85a1e1a" data-element_type="widget" data-widget_type="image.default">
+										<div class="elementor-widget-container">
+											<a href="https://themexriver.com/wp/orixy/?page_id=373">
+												<img decoding="async" width="130" height="130"
+													src="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/mail.png"
+													class="attachment-large size-large wp-image-1591" alt=""
+													loading="lazy"
+													srcset="https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/mail.png 130w, https://themexriver.com/wp/orixy/wp-content/uploads/2023/03/mail-100x100.png 100w"
+													sizes="(max-width: 130px) 100vw, 130px" /> </a>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-ccb5ff1 elementor-widget elementor-widget-heading"
+										data-id="ccb5ff1" data-element_type="widget" data-widget_type="heading.default">
+										<div class="elementor-widget-container">
+											<style>
+												/*! elementor - v3.12.1 - 02-04-2023 */
+												.elementor-heading-title {
+													padding: 0;
+													margin: 0;
+													line-height: 1
+												}
+
+												.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+													color: inherit;
+													font-size: inherit;
+													line-height: inherit
+												}
+
+												.elementor-widget-heading .elementor-heading-title.elementor-size-small {
+													font-size: 15px
+												}
+
+												.elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+													font-size: 19px
+												}
+
+												.elementor-widget-heading .elementor-heading-title.elementor-size-large {
+													font-size: 29px
+												}
+
+												.elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+													font-size: 39px
+												}
+
+												.elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+													font-size: 59px
+												}
+											</style>
+											<h2 class="elementor-heading-title elementor-size-default">Please don't hesitate to reach out to us.</h2>
+										</div>
+									</div>
+									<div class="elementor-element elementor-element-24481ee elementor-widget elementor-widget-oributton"
+										data-id="24481ee" data-element_type="widget"
+										data-widget_type="oributton.default">
+										<div class="elementor-widget-container">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3835960"
+								data-id="3835960" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+									<div class="elementor-element elementor-element-1dacbcf elementor-widget elementor-widget-oriaccrodion"
+										data-id="1dacbcf" data-element_type="widget"
+										data-widget_type="oriaccrodion.default">
+										<div class="elementor-widget-container">
+
+
+											<div class="orix-faq-accordion">
+												<div class="accordion" id="accordionExample2">
+													<div class="accordion-item headline-2 pera-content wow fadeInUp"
+														data-wow-delay="200ms" data-wow-duration="1500ms">
+														<h2 class="accordion-header" id="headingOne66a44dc">
+															<button class="accordion-button " type="button"
+																data-bs-toggle="collapse"
+																data-bs-target="#collapseOne66a44dc"
+																aria-expanded="true" aria-controls="collapseOne">
+																<span>Q: How can I schedule a cleaning service with C&M Garbage Cleaning?</span>
+															</button>
+														</h2>
+														<div id="collapseOne66a44dc"
+															class="accordion-collapse collapse show "
+															aria-labelledby="headingOne2"
+															data-bs-parent="#accordionExample66a44dc">
+															<div class="accordion-body">
+																<p>A: Scheduling a cleaning service is easy! You can either give us a call at [phone number] or fill out the contact form
+																on our website. Our friendly staff will assist you in booking a convenient date and time for your cleaning service. </p>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item headline-2 pera-content wow fadeInUp"
+														data-wow-delay="200ms" data-wow-duration="1500ms">
+														<h2 class="accordion-header" id="headingOneef5111b">
+															<button class="accordion-button collapsed" type="button"
+																data-bs-toggle="collapse"
+																data-bs-target="#collapseOneef5111b"
+																aria-expanded="true" aria-controls="collapseOne">
+																<span>Q: Are your cleaning products safe for the environment and pets?</span>
+															</button>
+														</h2>
+														<div id="collapseOneef5111b"
+															class="accordion-collapse collapse  "
+															aria-labelledby="headingOne2"
+															data-bs-parent="#accordionExampleef5111b">
+															<div class="accordion-body">
+																<p>A: Absolutely! We prioritize the use of eco-friendly cleaning products that are safe for the environment, humans, and
+																pets. Our products effectively clean and sanitize without posing any harm to your surroundings or loved ones. </p>
+															</div>
+														</div>
+													</div>
+													<div class="accordion-item headline-2 pera-content wow fadeInUp"
+														data-wow-delay="200ms" data-wow-duration="1500ms">
+														<h2 class="accordion-header" id="headingOne5f415fe">
+															<button class="accordion-button collapsed" type="button"
+																data-bs-toggle="collapse"
+																data-bs-target="#collapseOne5f415fe"
+																aria-expanded="true" aria-controls="collapseOne">
+																<span>Q: What areas do you serve?</span>
+															</button>
+														</h2>
+														<div id="collapseOne5f415fe"
+															class="accordion-collapse collapse  "
+															aria-labelledby="headingOne2"
+															data-bs-parent="#accordionExample5f415fe">
+															<div class="accordion-body">
+																<p>A: We proudly serve [insert locations or service areas]. If you're unsure whether we cover your area, feel free to
+																contact us, and we'll be happy to assist you. </p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					
+				</div>
+			</div><!-- #main -->
+
+			<div class="clearfix"></div>
+
+
+		</div><!-- #content -->
+	</div><!-- #page -->
+	<div style="margin-top: 30px;" data-elementor-type="wp-post" data-elementor-id="1869" class="elementor elementor-1869">
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-1a6ef89 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+			data-id="1a6ef89" data-element_type="section">
+			<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9c85bf5"
+					data-id="9c85bf5" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-adda579 elementor-widget elementor-widget-orif8"
+							data-id="adda579" data-element_type="widget" data-widget_type="orif8.default">
+							<div class="elementor-widget-container">
+
+								<footer id="orix-footer" class="orix-footer-section">
+									<div class="container">
+										<div
+											class="orix-footer-newsletter-area position-relative d-flex justify-content-between align-items-center">
+											<div class="orix-footer-newsletter-cta d-flex align-items-center">
+												<div class="newsletter-cta-text d-flex align-items-center">
+													<div
+														class="inner-icon d-flex justify-content-center align-items-center">
+														<i class="fas fa-phone-alt"></i>
+													</div>
+													<div class="inner-text">
+														<span>Give us a call</span>
+														<a href="tel:+67 123 456 7890">+585 943 4549</a>
+													</div>
+												</div>
+												<div class="newsletter-cta-icon ul-li">
+													<ul class="social-box">
+														<li>
+															<a href=""><i aria-hidden="true"
+																	class="fab fa-facebook-f"></i></a>
+														</li>
+														<li>
+															<a href=""><i aria-hidden="true"
+																	class="fab fa-instagram"></i></a>
+														</li>
+														<li>
+															<a href=""><i aria-hidden="true"
+																	class="fab fa-twitter"></i></a>
+														</li>
+														<li>
+															<a href=""><i aria-hidden="true"
+																	class="fab fa-linkedin-in"></i></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="orix-footer-newsletter-form-area d-flex align-items-center">
+												<div class="newsletter-form-text">
+													Join Newsletter </div>
+												<div class="newsletter-form-input">
+													<script>(function () {
+															window.mc4wp = window.mc4wp || {
+																listeners: [],
+																forms: {
+																	on: function (evt, cb) {
+																		window.mc4wp.listeners.push(
+																			{
+																				event: evt,
+																				callback: cb
+																			}
+																		);
+																	}
+																}
+															}
+														})();
+													</script><!-- Mailchimp for WordPress v4.9.2 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
+													<form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-1880"
+														method="post" data-id="1880" data-name="Newsletter">
+														<div class="mc4wp-form-fields"><input type="email" name="email"
+																placeholder="Your email">
+															<button type="submit">Submit</button>
+														</div><label style="display: none !important;">Leave this field
+															empty if you're human: <input type="text"
+																name="_mc4wp_honeypot" value="" tabindex="-1"
+																autocomplete="off" /></label><input type="hidden"
+															name="_mc4wp_timestamp" value="1683784417" /><input
+															type="hidden" name="_mc4wp_form_id" value="1880" /><input
+															type="hidden" name="_mc4wp_form_element_id"
+															value="mc4wp-form-1" />
+														<div class="mc4wp-response"></div>
+													</form><!-- / Mailchimp for WordPress Plugin -->
+												</div>
+											</div>
+										</div>
+										
+										<div class="orix-footer-copyright-text text-center">
+											© Copyright 2023 C&M All rights reserved. </div>
+									</div>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script>
+		window.RS_MODULES = window.RS_MODULES || {};
+		window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+		window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+		window.RS_MODULES.defered = true;
+		window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+		window.RS_MODULES.type = 'compiled';
+	</script>
+	<script>(function () {
+			function maybePrefixUrlField() {
+				const value = this.value.trim()
+				if (value !== '' && value.indexOf('http') !== 0) {
+					this.value = 'http://' + value
+				}
+			}
+
+			const urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]')
+			for (let j = 0; j < urlFields.length; j++) {
+				urlFields[j].addEventListener('blur', maybePrefixUrlField)
+			}
+		})();</script>
+	<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel='stylesheet' id='elementor-post-1744-css'
+		href='https://themexriver.com/wp/orixy/wp-content/uploads/elementor/css/post-1744.css?ver=1681119163'
+		media='all' />
+	<link rel='stylesheet' id='rs-plugin-settings-css'
+		href='https://themexriver.com/wp/orixy/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.5.14'
+		media='all' />
+	<style id='rs-plugin-settings-inline-css'>
+		#rs-demo-id {}
+	</style>
+	<script
+		src='https://themexriver.com/wp/orixy/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.5.1'
+		id='swv-js'></script>
+	<script id='contact-form-7-js-extra'>
+		var wpcf7 = { "api": { "root": "https:\/\/themexriver.com\/wp\/orixy\/wp-json\/", "namespace": "contact-form-7\/v1" } };
+	</script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.5.1'
+		id='contact-form-7-js'></script>
+	<script
+		src='https://themexriver.com/wp/orixy/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.5.14'
+		defer async id='tp-tools-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.5.14'
+		defer async id='revmin-js'></script>
+	<script
+		src='https://themexriver.com/wp/orixy/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.7.5.1'
+		id='jquery-blockui-js'></script>
+	<script id='wc-add-to-cart-js-extra'>
+		var wc_add_to_cart_params = { "ajax_url": "\/wp\/orixy\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/wp\/orixy\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View cart", "cart_url": "https:\/\/themexriver.com\/wp\/orixy\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
+	</script>
+	<script
+		src='https://themexriver.com/wp/orixy/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=7.5.1'
+		id='wc-add-to-cart-js'></script>
+	<script
+		src='https://themexriver.com/wp/orixy/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.7.5.1'
+		id='js-cookie-js'></script>
+	<script id='woocommerce-js-extra'>
+		var woocommerce_params = { "ajax_url": "\/wp\/orixy\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/wp\/orixy\/?wc-ajax=%%endpoint%%" };
+	</script>
+	<script
+		src='https://themexriver.com/wp/orixy/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=7.5.1'
+		id='woocommerce-js'></script>
+	<script id='wc-cart-fragments-js-extra'>
+		var wc_cart_fragments_params = { "ajax_url": "\/wp\/orixy\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/wp\/orixy\/?wc-ajax=%%endpoint%%", "cart_hash_key": "wc_cart_hash_ffaf535891b475457ae105289b85e720", "fragment_name": "wc_fragments_ffaf535891b475457ae105289b85e720", "request_timeout": "5000" };
+	</script>
+	<script
+		src='https://themexriver.com/wp/orixy/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=7.5.1'
+		id='wc-cart-fragments-js'></script>
+	<script defer
+		src='https://themexriver.com/wp/orixy/wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.9.2'
+		id='mc4wp-forms-api-js'></script>
+	<script
+		src='https://themexriver.com/wp/orixy/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.12.1'
+		id='elementor-webpack-runtime-js'></script>
+	<script
+		src='https://themexriver.com/wp/orixy/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.12.1'
+		id='elementor-frontend-modules-js'></script>
+	<script
+		src='https://themexriver.com/wp/orixy/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'
+		id='elementor-waypoints-js'></script>
+	<script src='https://themexriver.com/wp/orixy/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2'
+		id='jquery-ui-core-js'></script>
+	<script id='elementor-frontend-js-before'>
+		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.12.1", "is_static": false, "experimentalFeatures": { "e_dom_optimization": true, "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "a11y_improvements": true, "additional_custom_breakpoints": true, "container": true, "e_swiper_latest": true, "landing-pages": true }, "urls": { "assets": "https:\/\/themexriver.com\/wp\/orixy\/wp-content\/plugins\/elementor\/assets\/" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 1380, "title": "Orixy", "excerpt": "", "featuredImage": false } };
+	</script>
+	<script src='https://themexriver.com/wp/orixy/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.12.1'
+		id='elementor-frontend-js'></script>
+</body>
+
+</html>
